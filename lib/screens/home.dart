@@ -13,10 +13,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: MainColor.primaryColor,
+      ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/background.jpg"),
+            image: AssetImage("assets/images/background-games.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -29,8 +32,10 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Color(0xffFEBD69),
-                    borderRadius: BorderRadius.circular(25),
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/xo.png"),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   child: TextButton(
                     onPressed: () {
@@ -39,16 +44,18 @@ class HomeScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(80.0),
                       child: Text(
-                        'XO',
-                        style: customFontBlack,
+                        '',
+                        style: customFontWhite,
                       ),
                     ),
                   ),
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: Color(0xff6CCCCF),
-                    borderRadius: BorderRadius.circular(25),
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/shooter.png"),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   child: TextButton(
                     onPressed: () {
@@ -57,8 +64,8 @@ class HomeScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(80.0),
                       child: Text(
-                        'Shooting',
-                        style: customFontBlack,
+                        '',
+                        style: customFontWhite,
                       ),
                     ),
                   ),

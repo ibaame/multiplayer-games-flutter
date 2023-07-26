@@ -4,6 +4,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flame/game.dart';
+import 'package:multiplayer_games_flutter/start_page.dart';
 import '../game/game.dart';
 import '../person.dart';
 import 'package:flutter/material.dart';
@@ -44,11 +45,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Games',
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: StartPage(),
       routes: {
         GameScreen.screenRoute: (context) => GameScreen(),
         LobbyScreen.screenRoute: (context) => LobbyScreen(),
         GamePage.screenRoute: (context) => GamePage(),
+        HomeScreen.screenRoute: (context) => HomeScreen(),
       },
     );
   }
